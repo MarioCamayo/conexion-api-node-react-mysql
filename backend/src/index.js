@@ -35,7 +35,7 @@ const pool = mysql.createPool({
 
  
 
-app.get('/users', (req, res) => {
+app.get('/api/users', (req, res) => {
     pool.query('SELECT * FROM users', (err, results)=>{
     if(err) {
         return res.status(500).json(`Error obteniendo datos: ${err}`);
